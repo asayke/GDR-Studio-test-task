@@ -6,7 +6,7 @@ public class CoinPlayerCollsion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == _playerLayerMask)
+        if (other.gameObject.IsInLayerMask(_playerLayerMask))
         {
             Destroy(gameObject, 0.1f);
             UICoinsScore.OnCoinTriggered?.Invoke();

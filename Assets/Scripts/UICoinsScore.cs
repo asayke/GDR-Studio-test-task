@@ -7,6 +7,7 @@ public class UICoinsScore : MonoBehaviour
     private TextMeshProUGUI _coinsScoreTextMeshProUGUI;
     private int _coinsCount;
     public static Action OnCoinTriggered;
+    public static int ActualCoinsCount { get; private set; }
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class UICoinsScore : MonoBehaviour
 
     private void Start()
     {
+        ActualCoinsCount = 0;
         _coinsScoreTextMeshProUGUI.SetText($"Coins : {_coinsCount}");
     }
 
@@ -31,6 +33,7 @@ public class UICoinsScore : MonoBehaviour
     private void UpdateCoinsScore()
     {
         _coinsCount++;
+        ActualCoinsCount = _coinsCount;
         _coinsScoreTextMeshProUGUI.SetText($"Coins : {_coinsCount}");
     }
 }

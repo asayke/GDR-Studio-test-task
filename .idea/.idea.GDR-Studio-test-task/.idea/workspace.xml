@@ -18,9 +18,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoinShaking.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectId" id="2DDfjA0ddOVfwRs55wHc3AOhhoX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,7 +63,7 @@
       <workItem from="1660238720329" duration="7445000" />
       <workItem from="1660247371123" duration="2722000" />
       <workItem from="1660400916798" duration="4173000" />
-      <workItem from="1660407646333" duration="984000" />
+      <workItem from="1660407646333" duration="6080000" />
     </task>
     <servers />
   </component>

@@ -4,18 +4,18 @@ using System;
 
 public class UICoinsScore : MonoBehaviour
 {
-    private TextMeshProUGUI _textMeshProUGUI;
+    private TextMeshProUGUI _coinsScoreTextMeshProUGUI;
     private int _coinsCount;
     public static Action OnCoinTriggered;
 
     private void Awake()
     {
-        _textMeshProUGUI = GetComponent<TextMeshProUGUI>();
+        _coinsScoreTextMeshProUGUI = GetComponent<TextMeshProUGUI>();
     }
 
     private void Start()
     {
-        _textMeshProUGUI.SetText($"Coins : {_coinsCount}");
+        _coinsScoreTextMeshProUGUI.SetText($"Coins : {_coinsCount}");
     }
 
     private void OnEnable()
@@ -31,6 +31,6 @@ public class UICoinsScore : MonoBehaviour
     private void UpdateCoinsScore()
     {
         _coinsCount++;
-        _textMeshProUGUI.SetText($"Coins : {_coinsCount}");
+        _coinsScoreTextMeshProUGUI.SetText($"Coins : {_coinsCount}");
     }
 }

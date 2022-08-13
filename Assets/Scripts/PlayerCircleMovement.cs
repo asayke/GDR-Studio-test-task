@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class PlayerCircleMovement : MonoBehaviour
 {
-    [SerializeField] private LineRenderer _lineRenderer;
+    private LineRenderer _lineRenderer;
     private Vector3 _mousePosition;
     private Camera _mainCamera;
     private List<Vector3> _pathPoints;
@@ -13,6 +13,7 @@ public class PlayerCircleMovement : MonoBehaviour
 
     private void Awake()
     {
+        _lineRenderer = FindObjectOfType<LineRenderer>();
         _pathPoints = new List<Vector3>();
         _mainCamera = Camera.main;
     }
@@ -34,6 +35,7 @@ public class PlayerCircleMovement : MonoBehaviour
         {
             _lineRenderer.positionCount++;
             _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, _pathPoints[_actualPathIndex + 1]);
+
             Move();
         }
     }
